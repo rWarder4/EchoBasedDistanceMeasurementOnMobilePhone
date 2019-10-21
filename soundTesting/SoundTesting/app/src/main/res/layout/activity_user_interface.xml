@@ -1,0 +1,204 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".UserInterface">
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Start playing"
+        android:id="@+id/buttonPlay"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/radioGroup3"
+        android:layout_alignEnd="@+id/radioGroup3"
+        android:layout_alignBottom="@+id/radioGroup2"
+        android:onClick="startPlayingButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start recording"
+        android:id="@+id/buttonRec"
+        android:layout_toEndOf="@+id/buttonPlay"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="startRecordingButton" />
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/radioGroup">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="55 Hz"
+        android:id="@+id/radioButton55"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="110 Hz"
+        android:id="@+id/radioButton110"
+        android:layout_below="@+id/radioButton55"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="220 Hz"
+        android:id="@+id/radioButton220"
+        android:layout_below="@+id/radioButton110"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="440 Hz"
+        android:id="@+id/radioButton440"
+        android:layout_below="@+id/radioButton220"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="880 Hz"
+        android:id="@+id/radioButton880"
+        android:layout_below="@+id/radioButton440"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+    </RadioGroup>
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/radioGroup2"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_alignRight="@+id/buttonPlay"
+        android:layout_alignEnd="@+id/buttonPlay">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1760 Hz"
+        android:id="@+id/radioButton1760"
+        android:checked="false"
+        android:layout_toStartOf="@+id/radioButton19500"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/radioButton14080"
+        android:layout_alignRight="@+id/radioButton19500"
+        android:layout_alignEnd="@+id/radioButton19500"
+        android:layout_alignLeft="@+id/radioButton19500"
+        android:layout_alignStart="@+id/radioButton19500" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3520 Hz"
+        android:id="@+id/radioButton3520"
+        android:checked="false"
+        android:layout_toStartOf="@+id/radioButton14080"
+        android:layout_toEndOf="@+id/radioButton1760"
+        android:layout_below="@+id/radioButton1760"
+        android:layout_alignLeft="@+id/radioButton1760"
+        android:layout_alignStart="@+id/radioButton1760"
+        android:layout_alignRight="@+id/radioButton1760"
+        android:layout_alignEnd="@+id/radioButton1760" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7040 Hz"
+        android:id="@+id/radioButton7040"
+        android:checked="false"
+        android:layout_toStartOf="@+id/radioButton19500"
+        android:layout_below="@+id/radioButton3520"
+        android:layout_toEndOf="@+id/radioButton3520"
+        android:layout_alignLeft="@+id/radioButton3520"
+        android:layout_alignStart="@+id/radioButton3520"
+        android:layout_alignRight="@+id/radioButton19500"
+        android:layout_alignEnd="@+id/radioButton19500" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14080 Hz"
+        android:id="@+id/radioButton14080"
+        android:checked="false"
+        android:layout_toStartOf="@+id/radioButton19500"
+        android:layout_below="@+id/radioButton7040"
+        android:layout_alignLeft="@+id/radioButton19500"
+        android:layout_alignStart="@+id/radioButton19500"
+        android:layout_alignRight="@+id/radioButton19500"
+        android:layout_alignEnd="@+id/radioButton19500" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="19500 Hz"
+        android:id="@+id/radioButton19500"
+        android:checked="false"
+        android:layout_alignTop="@+id/radioButton880"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="91dp" />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:text="recording.raw"
+        android:layout_above="@+id/radioGroup3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup3"
+        android:layout_above="@+id/buttonRec"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5sec"
+            android:id="@+id/radioButton5s"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10sec"
+            android:id="@+id/radioButton10s" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15sec"
+            android:id="@+id/radioButton15s" />
+    </RadioGroup>
+
+</RelativeLayout>
